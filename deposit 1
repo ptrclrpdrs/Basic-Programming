@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	// Assignment 3
+	// Get the amount of purchase of the user. 
+	// Use the following guide to give the user a discount:
+	// 0-1000 = 5%, 1001-4999 = 10%, 5000 and above = 15%
+	// Display the discounted amount and the net payable.
+	
+	int p, d5, d10, d15, np5, np10, np15;
+	
+	cout<<"Enter the Amount of your Purchase: ";
+ 	cin>>p;
+ 	
+ 	d5=(p*.05);
+ 	d10=(p*.10);
+ 	d15=(p*.15);
+	
+	np5=(p-d5);
+	np10=(p-d10);
+	np5=(p-d15);
+
+ 	if (p<=1000)
+ 	{
+ 		cout<<"\nThere is a 5% discount to your purchase. Your discounted amount would be "<<d5<<".\n";
+ 		cout<<"\nYour net payable now is "<<np5<<".\n";
+	}
+	
+	else if ((p<=4999)&&(p==1001))
+	{
+ 		cout<<"\nThere is a 10% discount to your purchase. Your discounted amount would be "<<d10<<".\n";
+ 		cout<<"\nYour net payable now is "<<np10<<".\n";
+	}
+	
+ 	else 
+	{
+ 		cout<<"\nThere is a 15% discount to your purchase. Your discounted amount would be "<<d15<<".\n";
+ 		cout<<"\nYour net payable now is "<<np15<<".\n";
+	}
+	
+		return 0;
+}
+
+
+
